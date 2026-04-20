@@ -14,9 +14,10 @@ import com.booking.coach_demo.entity.lichtrinhxe;
 import com.booking.coach_demo.service.XeService;
 import com.booking.coach_demo.service.LichTrinhService;
 import com.booking.coach_demo.service.ThongKeService;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.List;
 @RestController
+@CrossOrigin(origins = "http://localhost:10000")
 @RequestMapping("/api")
 public class CoachController {
     @Autowired
