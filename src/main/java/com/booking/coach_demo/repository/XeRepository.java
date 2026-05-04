@@ -4,4 +4,3 @@ import com.booking.coach_demo.entity.xe;
 public interface XeRepository extends JpaRepository<xe, String> {
     
 }
-

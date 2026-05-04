@@ -12,15 +12,15 @@ public class XeService {
     public xe addXe(xe xe){
         LocalDate now = LocalDate.now();
         if(xe.getHanKiemDinh().isBefore(now.plusMonths(1))){
-            throw new IllegalArgumentException("H?n ki?m ??nh ph?i sau ng?y hi?n t?i");
+            throw new IllegalArgumentException("Hạn kiểm định phải sau ngày hiện tại");
         }
         return xeRepository.save(xe);
     }
-    public List<xe> getAllXe() {
+    public List<xe> getAllXe()
+    {
         return xeRepository.findAll();
     }
     public xe getXeById(String maloaixe){
         return xeRepository.findById(maloaixe).orElse(null);
     }
 }
-
